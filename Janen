@@ -1,13 +1,12 @@
-// Prompt user for username and password
-let user_name = prompt("Enter your username:");
-let user_password = prompt("Enter your password:");
+// Ask user for dog breed and print count
+let dog_breed = prompt("Enter the dog breed:");
+let print_count = parseInt(prompt("Enter how many times to print:"), 10);
 
-// Predefined password for validation
-let stored_password = "secure123"; // Example stored password
-
-// Check if entered password matches
-if (user_password === stored_password) {
-    alert(`Welcome ${user_name}`);
+// Validate if print_count is a number
+if (!isNaN(print_count) && print_count > 0) {
+    for (let i = 0; i < print_count; i++) {
+        console.log(`${i + 1}: ${dog_breed}`);
+    }
 } else {
-    alert("Maybe Username or Password is Invalid or Does not Match");
+    console.log("Invalid print count. Please enter a valid number.");
 }
